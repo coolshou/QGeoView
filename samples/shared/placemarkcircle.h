@@ -15,6 +15,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program; if not, see https://www.gnu.org/licenses.
  ****************************************************************************/
+#ifndef PLACEMARKCIRCLE_H
+#define PLACEMARKCIRCLE_H
 
 #pragma once
 
@@ -42,3 +44,4 @@ private:
     QColor mColor;
     int mRadius;
 };
+#endif // PLACEMARKCIRCLE_H

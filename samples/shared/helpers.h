@@ -15,18 +15,21 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program; if not, see https://www.gnu.org/licenses.
  ****************************************************************************/
+#ifndef HELPERS_H
+#define HELPERS_H
 
 #pragma once
 
 #include <QGeoView/QGVMap.h>
 
 namespace Helpers {
-void setupCachedNetworkAccessManager(QObject* parent);
+    void setupCachedNetworkAccessManager(QObject* parent);
 
-int randomInt(int lowest, int highest);
-QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea, const QSizeF& size);
-QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea, int baseSize);
-QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea);
-QGV::GeoPos randPos(const QGV::GeoRect& targetArea);
-QSizeF randSize(int baseSize);
+    int randomInt(int lowest, int highest);
+    QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea, const QSizeF& size);
+    QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea, int baseSize);
+    QGV::GeoRect randRect(QGVMap* geoMap, const QGV::GeoRect& targetArea);
+    QGV::GeoPos randPos(const QGV::GeoRect& targetArea);
+    QSizeF randSize(int baseSize);
 }
+#endif // HELPERS_H

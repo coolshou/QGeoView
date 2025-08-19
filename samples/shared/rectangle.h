@@ -15,6 +15,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program; if not, see https://www.gnu.org/licenses.
  ****************************************************************************/
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
 
 #pragma once
 
@@ -51,3 +53,5 @@ private:
     QRectF mProjRect;
     QColor mColor;
 };
+
+#endif //RECTANGLE_H

@@ -105,12 +105,12 @@ QString QGVWidgetScale::getDistanceLabel(int meters) const
     if (distanceValue >= 1 || (distanceValue < 1 && !mUseMetersForSmallDistance)) {
         const int accuracy = distanceValue >= 1 ? 0 : 2;
         return tr("%1 %2")
-                .arg(QString::number(static_cast<double>(distanceValue), 'f', accuracy))
-                .arg(QGV::unitToString(mDistanceUnits));
+                .arg(QString::number(static_cast<double>(distanceValue), 'f', accuracy),
+                     QGV::unitToString(mDistanceUnits));
     } else {
         return tr("%1 %2")
-                .arg(QString::number(static_cast<double>(meters), 'f', 0))
-                .arg(QGV::unitToString(QGV::DistanceUnits::Meters));
+                .arg(QString::number(static_cast<double>(meters), 'f', 0),
+                     QGV::unitToString(QGV::DistanceUnits::Meters));
     }
 }
 

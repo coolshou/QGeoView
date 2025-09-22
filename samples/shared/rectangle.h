@@ -34,11 +34,11 @@ public:
 
     void setRect(const QGV::GeoRect& geoRect);
     QGV::GeoRect getRect() const;
-
+protected:
+    void projPaint(QPainter* painter) override;
 private:
     void onProjection(QGVMap* geoMap) override;
     QPainterPath projShape() const override;
-    void projPaint(QPainter* painter) override;
     QPointF projAnchor() const override;
     QTransform projTransform() const override;
     QString projTooltip(const QPointF& projPos) const override;
